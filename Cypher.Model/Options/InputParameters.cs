@@ -1,5 +1,8 @@
-﻿namespace Cipher.Model;
+﻿namespace Cipher.Logic;
 
+/// <summary>
+/// Входные параметры
+/// </summary>
 public class InputParameters
 {
     /// <summary>

@@ -1,4 +1,4 @@
-﻿namespace Cipher.Model;
+﻿namespace Cipher.Logic;
 
 public enum Cipher
 {

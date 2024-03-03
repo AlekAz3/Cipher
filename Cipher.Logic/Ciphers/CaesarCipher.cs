@@ -1,6 +1,4 @@
-﻿using Cipher.Model;
-
-namespace Cipher.Model;
+﻿namespace Cipher.Logic;
 
 public class CaesarCipher : IBasicCipher
 {
