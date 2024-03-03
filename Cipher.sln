@@ -2,6 +2,14 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cipher.App", "Cipher.App\Cipher.App.csproj", "{CCA2FF62-EFD6-4ACF-BFDA-D815DC48499B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cipher.Logic", "Cipher.Logic\Cipher.Logic.csproj", "{2BC0DA52-CD6F-47C9-BABB-A05ADE491690}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E693F605-E369-4B7C-8BA9-D17C1A071AD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3816991A-F52A-4B3F-BA64-402B5BDF0B11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cipher.Tests", "Cipher.Tests\Cipher.Tests.csproj", "{26F4EBAC-962B-492C-874C-6E4414B0BB9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +20,18 @@ Global
 		{CCA2FF62-EFD6-4ACF-BFDA-D815DC48499B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCA2FF62-EFD6-4ACF-BFDA-D815DC48499B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCA2FF62-EFD6-4ACF-BFDA-D815DC48499B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC0DA52-CD6F-47C9-BABB-A05ADE491690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC0DA52-CD6F-47C9-BABB-A05ADE491690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC0DA52-CD6F-47C9-BABB-A05ADE491690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC0DA52-CD6F-47C9-BABB-A05ADE491690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26F4EBAC-962B-492C-874C-6E4414B0BB9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26F4EBAC-962B-492C-874C-6E4414B0BB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26F4EBAC-962B-492C-874C-6E4414B0BB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26F4EBAC-962B-492C-874C-6E4414B0BB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CCA2FF62-EFD6-4ACF-BFDA-D815DC48499B} = {E693F605-E369-4B7C-8BA9-D17C1A071AD7}
+		{2BC0DA52-CD6F-47C9-BABB-A05ADE491690} = {E693F605-E369-4B7C-8BA9-D17C1A071AD7}
+		{26F4EBAC-962B-492C-874C-6E4414B0BB9B} = {3816991A-F52A-4B3F-BA64-402B5BDF0B11}
 	EndGlobalSection
 EndGlobal
