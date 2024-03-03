@@ -14,42 +14,26 @@ class Program
 
     static void Start(InputOption option)
     {
-        var input = new InputParameters { InputText = option.InputText, Key = option.Key };
 
-        switch (option.InputType)
+
+        var input = new InputParameters { InputText = string.Join(' ', option.InputText.ToArray()) , Key = option.Key };
+
+        _cipher = option.InputType switch
         {
-            case Cipher.Caesar:
-                _cipher = new CaesarCipher();
-                break;
-            case Cipher.A1Z26:
-                _cipher = new A1Z26Cipher();
-                break;
-            case Cipher.Morse:
-                _cipher = new MorseCipher();
-                break;
-            case Cipher.Vigenere:
-                _cipher = new VigenereCipher();
-                break;
-            case Cipher.Xor:
-                _cipher = new XorCipher();
-                break;
-            default:
-                throw new NotImplementedException();
-        }
+            Cipher.Caesar => new CaesarCipher(),
+            Cipher.A1Z26 => new A1Z26Cipher(),
+            Cipher.Morse => new MorseCipher(),
+            Cipher.Vigenere => new VigenereCipher(),
+            Cipher.Xor => new XorCipher(),
+            _ => throw new NotImplementedException()
+        };
 
-        string outPutValue;
-
-        switch (option.Mode)
+        string outPutValue = option.Mode switch
         {
-            case Mode.Encrypt:
-                outPutValue = _cipher.Encrypt(input);
-                break;
-            case Mode.Decrypt:
-                outPutValue = _cipher.Decrypt(input);
-                break;
-            default:
-                throw new NotImplementedException();
-        }
+            Mode.Encrypt => _cipher.Encrypt(input),
+            Mode.Decrypt => _cipher.Decrypt(input),
+            _ => throw new NotImplementedException()
+        };
 
         Console.WriteLine(outPutValue);
     }

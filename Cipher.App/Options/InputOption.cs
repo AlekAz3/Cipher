@@ -12,7 +12,7 @@ public class InputOption
 
     [Option('m', "mode", Required = true)] public Mode Mode { get; set; }
 
-    [Option('t', "text", Required = true)] public string? InputText { get; set; }
+    [Option('t', "text", Required = true)] public  IEnumerable<string> InputText { get; set; }
 
     [Option('k', "key", Required = true)] public string? Key { get; set; }
 }
