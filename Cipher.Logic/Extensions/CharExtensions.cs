@@ -2,9 +2,17 @@
 
 public static class CharExtensions
 {
+    public static bool IsLetter(this char a)
+    {
+        int position = Convert.ToInt32(a);
+
+        return (position is >= 65 and <= 90 or >= 97 and <= 122);
+    }
+
+
     public static char JumpLetter(this char letter, int a)
     {
-        var position = Convert.ToInt32(letter);
+        int position = Convert.ToInt32(letter);
 
         if (position is >= 65 and <= 90)
         {
